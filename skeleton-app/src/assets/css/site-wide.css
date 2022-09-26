@@ -1,0 +1,33 @@
+
+
+table.px {
+    
+}
+
+table.px td.bid {
+    background-color: rgba(100, 255, 100, .3);;
+}
+
+table.px td.ask {
+    background-color: rgba(255, 100, 100, .3);
+}
+
+
+table.px th, table.px td {
+    text-align: center;
+    padding: 0;
+    border:0;
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+div.red-border {
+    border: 1px solid red;
+}
+
+div.grey-dotted-border {
+    border: 1px dotted grey;
+}
