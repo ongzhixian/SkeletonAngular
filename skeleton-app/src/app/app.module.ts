@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PriceLadderComponent } from './ui/price-ladder/price-ladder.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { PriceLadderComponent } from './ui/price-ladder/price-ladder.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({}, {})
   ],
   bootstrap: [AppComponent]
 })

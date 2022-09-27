@@ -4,6 +4,13 @@
 # from forum_app.pages import menu
 # from forum_app.modules import app_state
 # from forum_app.features import BaseMenuInterface
+from skeleton_app import current_app
+
+
+# @app.after_request
+# def after_request(response):
+#     do_something_based_on_the_request_endpoint(request)
+#     return response
 
 # @app.before_request
 # def before_each_request():
