@@ -11,3 +11,5 @@ ng build
 ng add _____
 ng add @angular/pwa
 ng test
+
+https://www.linkedin.com/pulse/data-sharing-between-components-raj-kale?trk=public_profile_article_view
