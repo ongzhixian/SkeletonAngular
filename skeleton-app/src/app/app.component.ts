@@ -25,6 +25,11 @@ export class AppComponent {
 
   testApi() {
     console.log("Call API");
-    let r = this.priceService.getPrices();
+    let subscriber = this.priceService.getPrices();
+  }
+
+  testApi2() {
+    console.log("Call API 2");
+    let priceSubscription = this.priceService.getPrices2();
   }
 }
