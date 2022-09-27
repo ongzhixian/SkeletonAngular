@@ -1,0 +1,16 @@
+<table class="u-full-width">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let portfolio of portfolioList">
+        <tr class="interactive" (click)="onSelect(portfolio)">
+            <td>{{portfolio.id}}</td>
+            <td>{{portfolio.name}}</td>
+            <td>{{portfolio.description}}</td>
+        </tr>
+    </tbody>
+</table>

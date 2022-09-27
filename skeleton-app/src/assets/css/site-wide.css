@@ -1,4 +1,22 @@
+body {
+    
+}
 
+.no-margin {
+    margin: 0;
+}
+
+.pad-1em {
+    padding: 1em;
+}
+
+.interactive {
+    cursor: pointer;
+}
+
+tr.interactive:hover {
+    background-color: antiquewhite;
+}
 
 table.px {
     
