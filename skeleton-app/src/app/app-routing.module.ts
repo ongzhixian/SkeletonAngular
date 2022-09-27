@@ -8,6 +8,7 @@ const routes: Routes = [
     { path: 'order-entry', component: OrderEntryComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 
 
