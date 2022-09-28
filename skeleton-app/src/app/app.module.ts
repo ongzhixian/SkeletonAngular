@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PriceLadderComponent } from './ui/price-ladder/price-ladder.component';
@@ -10,6 +11,8 @@ import { PortfolioDetailComponent } from './ui/portfolio-detail/portfolio-detail
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './ui/dashboard/dashboard.component';
 import { OrderEntryComponent } from './ui/order-entry/order-entry.component';
+import { WsmsgComponent } from './ui/wsmsg/wsmsg.component';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,15 @@ import { OrderEntryComponent } from './ui/order-entry/order-entry.component';
     PortfolioListComponent,
     PortfolioDetailComponent,
     DashboardComponent,
-    OrderEntryComponent
+    OrderEntryComponent,
+    WsmsgComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     StoreModule.forRoot({}, {}),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })
