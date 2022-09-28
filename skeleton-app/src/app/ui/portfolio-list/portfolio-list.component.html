@@ -14,3 +14,12 @@
         </tr>
     </tbody>
 </table>
+
+<button (click)="displayModal()">Add portfolio</button>
+
+<div class="modal" [attr.style]="modalStyle">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p>Form content to add portfolio</p>
+    </div>
+</div>

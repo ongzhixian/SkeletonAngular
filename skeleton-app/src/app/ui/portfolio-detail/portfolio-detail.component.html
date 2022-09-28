@@ -3,20 +3,21 @@
 <div *ngIf="!selectedPortfolio">
     Select a portfolio detail
 </div>
+
 <div *ngIf="selectedPortfolio">
     <div class="row">
         <div class="three columns"><label>Id</label></div>
-        <div class="nine columns">{{ selectedPortfolio?.id }}</div>
+        <div class="nine columns">{{ selectedPortfolio.id }}</div>
     </div>
 
     <div class="row">
         <div class="three columns"><label>Name</label></div>
-        <div class="nine columns">{{ selectedPortfolio?.name }}</div>
+        <div class="nine columns">{{ selectedPortfolio.name }}</div>
     </div>
     
     <div class="row">
         <div class="three columns"><label>Description</label></div>
-        <div class="nine columns">{{ selectedPortfolio?.description }}</div>
+        <div class="nine columns">{{ selectedPortfolio.description }}</div>
     </div>
     
 </div>

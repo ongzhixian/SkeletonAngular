@@ -12,6 +12,7 @@ export class PortfolioListComponent implements OnInit {
 
     portfolioList?: Portfolio[];
     selectedPortfolio?: Portfolio;
+    modalStyle?: string;
 
     ngOnInit(): void {
         this.portfolioList = this.portfolioService.getPortfolioList();
@@ -21,5 +22,13 @@ export class PortfolioListComponent implements OnInit {
         this.selectedPortfolio = portfolio;
         this.portfolioService.setData(this.selectedPortfolio);
         console.log(portfolio);
+    }
+
+    displayModal(): void {
+        this.modalStyle = "display:block";
+    }
+
+    closeModal(): void {
+        this.modalStyle = "display:none";
     }
 }
