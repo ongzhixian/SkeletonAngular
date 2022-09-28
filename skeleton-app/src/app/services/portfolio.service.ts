@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Portfolio } from '../models/portfolio';
-import { Subject } from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -9,9 +9,7 @@ export class PortfolioService {
 
     constructor() { }
 
-    private selectedPortfolio = new Subject<Portfolio>();
-
-    portfolioSelected$ = this.selectedPortfolio.asObservable();
+    private selectedPortfolioSubject = new Subject<Portfolio>();
 
     getPortfolioList(): Portfolio[] {
         return [
@@ -21,7 +19,11 @@ export class PortfolioService {
         ];
     }
 
-    selectPortfolio(portfolio: Portfolio) {
-        this.selectedPortfolio.next(portfolio);
+    public setData(message: Portfolio) {
+        this.selectedPortfolioSubject.next(message);
+    }
+     
+    public getData(): Observable<Portfolio> {
+        return this.selectedPortfolioSubject.asObservable();
     }
 }

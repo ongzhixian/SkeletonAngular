@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Portfolio } from 'src/app/models/portfolio';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
     selector: 'app-portfolio-detail',
@@ -7,16 +9,16 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChange
 })
 export class PortfolioDetailComponent implements OnInit {
 
-    @Input() messageToChild2: string = "asd";
-    @Output() messageToParent = new EventEmitter<string>();
-  
+    constructor(private portfolioService: PortfolioService) { }
 
-    constructor() { }
+    selectedPortfolio?: Portfolio;
 
-    ngOnInit(): void {}
-
-    ngOnChanges(changes: SimpleChanges) {
-        // changes.prop contains the old and the new value...
-        console.log("some changes occurred");
+    ngOnInit(): void {
+        this.portfolioService.getData().subscribe(result => {
+            console.log("Portfolio detail", result);
+            this.selectedPortfolio = result;
+        }, error => {
+            console.warn('failed to get data', error);
+        });
     }
 }
